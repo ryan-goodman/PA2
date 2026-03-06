@@ -3,6 +3,7 @@ Ryan Goodman (UFID: 46759399)
 ## Instructions to Run
 - Navigate to /src and run the following commands. Note that you should use whatever python alias your device has.
 > "python inputPreparation.py k m" where $k$ and $m$ correspond to the cache size and number of requests, respectively
+
 > "python policies.py"
 ## Other Info
 - The input.txt file format should match the format given on the assignment exactly; there is no guarantee that things will work if a different format is used (inputPreparation.py will follow this input format).
