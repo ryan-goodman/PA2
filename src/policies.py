@@ -1,4 +1,6 @@
 file = open("input.txt")
+out_file = open("output.txt", "w")
+
 firstLine = file.readline().split(" ")
 
 k = int(firstLine[0])
@@ -24,7 +26,7 @@ def FIFO():
             cache[request] = True
             queue.append(request)
     
-    print(f"FIFO : {numOfMisses}")
+    print(f"FIFO : {numOfMisses}", file=out_file)
 
 def LRU():
     from collections import OrderedDict
@@ -41,7 +43,7 @@ def LRU():
                 cache.popitem(last=False)
             cache[request] = True
 
-    print(f"LRU : {numOfMisses}")
+    print(f"LRU : {numOfMisses}", file=out_file)
 
 def OPTFF():
     from collections import deque
@@ -71,14 +73,17 @@ def OPTFF():
                         if item in candidates:
                             evict = item
                             break
-                del cache[evict]
-                order.remove(evict)
+                    del cache[evict]
+                    order.remove(evict)
 
             cache[request] = True
             order.append(request)
     
-    print(f"OPTFF : {numOfMisses}")
+    print(f"OPTFF : {numOfMisses}", file=out_file)
 
 FIFO()
 LRU()
 OPTFF()
+
+out_file.close()
+file.close()
