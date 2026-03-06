@@ -8,4 +8,5 @@ Ryan Goodman (UFID: 46759399)
 ## Other Info
 - The input.txt file format should match the format given on the assignment exactly; there is no guarantee that things will work if a different format is used (inputPreparation.py will follow this input format).
 - The assignment did not specify how to handle a tiebreaker with OPTFF, so I chose to use FIFO. I chose to generate the requests by randomly generating $m$ integers from $1$ to $m$ since this was not specified either.
+- The current input.txt and output.txt files in /src represent running "python inputPreparation.py 3 6" and "python policies.py".
 - The responses to the written component are in the file "PA2.pdf".
