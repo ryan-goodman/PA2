@@ -73,8 +73,8 @@ def OPTFF():
                         if item in candidates:
                             evict = item
                             break
-                    del cache[evict]
-                    order.remove(evict)
+                del cache[evict]
+                order.remove(evict)
 
             cache[request] = True
             order.append(request)
@@ -86,4 +86,5 @@ LRU()
 OPTFF()
 
 out_file.close()
+
 file.close()
